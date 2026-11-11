@@ -29,7 +29,7 @@ durationMinutes: {
 },
 type: {
     type: String,
-    valid: ['Video', 'Reading', 'Coding', 'Project', 'Practice', 'Certificate'],
+    enum: ['Video', 'Reading', 'Coding', 'Project', 'Practice', 'Certificate'],
     default: " "
 },
 proofUrl: String,

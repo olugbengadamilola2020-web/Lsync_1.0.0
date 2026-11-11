@@ -7,7 +7,7 @@ const platformSchema = new mongoose.Schema({
     },
     type: {
         type: String,
-        valid: ['Youtube', 'Udemy', 'Coursera', 'GitHub', 'Blogs', 'Book', 'edX', 'Other'],
+        enum: ['Youtube', 'Udemy', 'Coursera', 'GitHub', 'Blogs', 'Book', 'edX', 'Other'],
         required: true
     },
     user: {

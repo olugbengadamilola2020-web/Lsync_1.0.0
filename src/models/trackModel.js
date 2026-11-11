@@ -9,7 +9,7 @@ const TrackSchema = new mongoose.Schema({
     description: String,
     category: {
         type: String,
-        valid: ['Tech', 'Design', 'Business', 'Trade', 'Health', 'Engineering', 'Education', 'Architecture', 'Environment', 'Other'],
+        enum: ['Tech', 'Design', 'Business', 'Trade', 'Health', 'Engineering', 'Education', 'Architecture', 'Environment', 'Other'],
         default: " "
     },
     requiredSkils: String,

@@ -42,6 +42,26 @@ const UserSchema = new mongoose.Schema({
         type: Boolean,
         default: true
     },
+    showStats: {
+        type: Boolean,
+        default: true
+    },
+    showPlatforms: {
+        type: Boolean,
+        default: true
+    },
+    linkedAccounts: [{
+        platform: {
+            type: mongoose.Schema.Types.ObjectId,
+            ref: 'Platform'
+        },
+        platformUsername: String,
+        profileUrl: String,
+        verified: {
+            type: String,
+            default: false
+        },
+    }]
   },  { timestamps: true });
 
     User = mongoose.model('User', UserSchema);
